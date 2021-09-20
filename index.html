@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
+      integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w=="
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+
+    <title>4Geeks</title>
+  </head>
+
+  <body>
+    <div class="container mt-5">
+      <form id="formularioDatosDePago">
+        <div class="card">
+          <div class="card-header">
+            <h2>Payment Form Example</h2>
+          </div>
+          <div class="card-body">
+            <div class="alert alert-danger card" role="alert">
+              <h5>Some fields are missing</h5> 
+            </div>
+            <div class="row">
+              <div class="col-12">
+                <div class="alert alert-danger d-none" role="alert">
+                  Some fields are missing
+                </div>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-12 col-sm-12 col-md-5">
+                <div class="form-group">
+                  <label class="form-label">Card #</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    placeholder="XXXXXXXXXXXXXXXXXX"
+                    id="card"
+                    name="card"
+                  />
+                  <div class="invalid-feedback" id="error_card">
+                    Error número de tarjeta inválida
+                  </div>
+                </div>
+              </div>
+              <div class="col-12 col-sm-6 col-md-3">
+                <div class="form-group">
+                  <label class="form-label">CVC #</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    placeholder="000"
+                    id="valorCvc"
+                    name="valorCvc"
+                  />
+                  <div class="invalid-feedback" id="error_valorCvc"></div>
+                </div>
+              </div>
+              <div class="col-12 col-sm-6 col-md-4">
+                <div class="form-group">
+                  <label class="form-label">Amount </label>
+                  <label for="">$</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    placeholder="Amount"
+                    id="amountValor"
+                    name="amountValor"
+                  />
+                  <div class="invalid-feedback" id="error_amount"></div>
+                </div>
+              </div>
+              <div class="col-12 col-md-6">
+                <div class="form-group">
+                  <label class="form-label">First name</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="firstnameValor"
+                    name="firstnameValor"
+                  />
+                  <div class="invalid-feedback" id="inserteNombre"></div>
+                </div>
+              </div>
+              <div class="col-12 col-md-6">
+                <div class="form-group">
+                  <label class="form-label">Last name</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="lastApellidoValor"
+                    name="lastApellidoValor"
+                  />
+                  <div class="invalid-feedback" id="inserteApellido"></div>
+                </div>
+              </div>
+              <div class="col-12 col-md-6">
+                <div class="form-group">
+                  <label class="form-label">City</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="cityValor"
+                    name="cityValor"
+                  />
+                  <div class="invalid-feedback" id="city"></div>
+                </div>
+              </div>
+              <div class="col-12 col-md-3">
+                <div class="form-group">
+                  <label class="form-label">State</label>
+                  <select
+                    class="form-control"
+                    aria-label="Default select example"
+                    id="stateValor"
+                    name="stateValor"
+                  >
+                    <option>Pick a state</option>
+                    <option value="1">One</option>
+                    <option value="2">Two</option>
+                    <option value="3">Three</option>
+                  </select>
+                  <div class="invalid-feedback" id="PickAState"></div>
+                </div>
+              </div>
+              <div class="col-12 col-md-3">
+                <div class="form-group">
+                  <label class="form-label">Postal code</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="postalCodeValor"
+                    name="postalCodeValor"
+                  />
+                  <div class="invalid-feedback" id="postalCode"></div>
+                </div>
+              </div>
+              <div class="col-12 col-md-6">
+                <div class="form-group">
+                  <label class="d-block form-label">We accept:</label>
+                  <div
+                    class="d-inline-block bg-secondary p-2 rounded-lg text-white"
+                  >
+                    <div
+                      class="custom-control custom-radio custom-control-inline"
+                    >
+                      <input
+                        type="radio"
+                        id="customRadioInline1"
+                        name="customRadioInline1"
+                        class="custom-control-input"
+                      />
+                      <label
+                        class="custom-control-label"
+                        for="customRadioInline1"
+                        ><i class="fab fa-cc-mastercard"></i
+                      ></label>
+                    </div>
+                    <div
+                      class="custom-control custom-radio custom-control-inline"
+                    >
+                      <input
+                        type="radio"
+                        id="customRadioInline2"
+                        name="customRadioInline1"
+                        class="custom-control-input"
+                      />
+                      <label
+                        class="custom-control-label"
+                        for="customRadioInline2"
+                        ><i class="fab fa-cc-visa"></i
+                      ></label>
+                    </div>
+                    <div
+                      class="custom-control custom-radio custom-control-inline"
+                    >
+                      <input
+                        type="radio"
+                        id="customRadioInline3"
+                        name="customRadioInline1"
+                        class="custom-control-input"
+                        checked
+                      />
+                      <label
+                        class="custom-control-label"
+                        for="customRadioInline3"
+                        ><i class="fab fa-cc-diners-club"></i
+                      ></label>
+                    </div>
+                    <div
+                      class="custom-control custom-radio custom-control-inline"
+                    >
+                      <input
+                        type="radio"
+                        id="customRadioInline4"
+                        name="customRadioInline1"
+                        class="custom-control-input"
+                      />
+                      <label
+                        class="custom-control-label"
+                        for="customRadioInline4"
+                        ><i class="fab fa-cc-amex"></i
+                      ></label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-12 col-md-6">
+                <div class="form-group">
+                  <label for="exampleFormControlTextarea1">Message</label>
+                  <textarea
+                    class="form-control"
+                    id="exampleFormControlTextarea1"
+                    name="exampleFormControlTextarea1"
+                    rows="3"
+                  ></textarea>
+                  <div class="invalid-feedback" id="Message"></div>
+                  <small
+                    id="exampleFormControlTextarea1Help"
+                    class="form-text text-muted"
+                    >Add any notes here.</small
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="card-footer text-right">
+            <a href="#" class="btn btn-secondary">Cancel</a>
+            <button type="submit" class="btn btn-primary">Send</button>
+          </div>
+        </div>
+      </form>
+    </div>
+    <script src="validacion.js"></script>
+  </body>
+</html>
